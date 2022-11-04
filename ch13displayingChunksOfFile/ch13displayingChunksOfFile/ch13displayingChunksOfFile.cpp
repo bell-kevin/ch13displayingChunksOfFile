@@ -12,47 +12,42 @@ int main()
 	cout << "Enter the name of the file to be read: ";
 	char filename[80];
 	cin >> filename;
+	cout << endl;
 	
-	ifstream fin(filename);
-	if (!fin)
+	ifstream input(filename);
+	if (!input)
 	{
 		cout << "Error opening file " << filename << endl;
 		return 1;
 	}
 	
-	char ch;
 	//loop while response is yes
 	char response = 'y';
 	while (response == 'y')
 	{
-		
-		// Read a chunk of the file
 		// read 8 lines
-		for (int i = 0; i < 6; i++)
+		for (int i = 0; i < 8; i++)
 		{
-			// read a line
-			for (int j = 0; j < 60; j++)
+			string line;
+			getline(input, line);
+			cout << line << endl;
+			//end of file
+			if (input.eof())
 			{
-				fin.get(ch);
-				cout << ch;
-			}
-		}
+				cout << "End of file reached" << endl;
+				system("pause");
+				return 0;
+			} // end if condition
+		} // end for loop
 		cout << endl;
 		cout << "Continue? (y/n): ";
 		cin >> response;
-		
-		
-		
+		cout << endl;
 	} //end while loop
-	//Display 8 lines of rj.txt
-	/*
-	for (int j = 0; j < 359; j++)
-	{
-		fin.get(ch);
-		cout << ch;
+
+	if (response == 'n'){
+	cout << "Bye\n";
 	}
-	cout << endl;
-	*/
 	system("pause");
 	return 0;
 } // end main function
