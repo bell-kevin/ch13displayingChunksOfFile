@@ -4,15 +4,13 @@ Create a C++ project that asks the user for the name of a file. Be sure you use 
 
 Here is the result when the user says to stop displaying (it says "Bye"):
 
-Ch 13 Reading running
+![Ch 13 Reading running](https://github.com/bell-kevin/ch13displayingChunksOfFile/blob/main/shakespeare.PNG)
 
 Here is the result when it reaches the end of file (it says "End of File").
 
-Ch 13 Reading end
+![Ch 13 Reading end](https://github.com/bell-kevin/ch13displayingChunksOfFile/blob/main/shakespeareWill.PNG)
 
 Take screenshots of both results.
-
- 
 
 NOTE: Remember the requirements for a header and a pause at the end of the program, discussed in the reading "Console Applications". These are required in every console application project.
 
